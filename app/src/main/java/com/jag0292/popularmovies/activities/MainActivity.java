@@ -17,6 +17,7 @@ import android.view.MenuItem;
 
 import com.jag0292.popularmovies.R;
 import com.jag0292.popularmovies.fragments.MoviesFragment;
+import com.jag0292.popularmovies.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -93,9 +94,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_movies) {
-            // Handle the camera action
+            FragmentTransaction transaction = mFragmentManager.beginTransaction();
+            transaction.replace(R.id.fragmentContainer, new MoviesFragment());
+            transaction.commit();
         } else if (id == R.id.nav_settings) {
-
+            FragmentTransaction transaction = mFragmentManager.beginTransaction();
+            transaction.replace(R.id.fragmentContainer, new SettingsFragment());
+            transaction.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

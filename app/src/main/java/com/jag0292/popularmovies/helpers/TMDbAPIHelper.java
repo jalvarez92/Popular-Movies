@@ -18,7 +18,7 @@ import java.net.URL;
  */
 public class TMDbAPIHelper {
 
-    public static final String API_KEY = "YOUR_API_KEY";
+    public static final String API_KEY = "your_api_key";
     private static final String LOG_TAG = TMDbAPIHelper.class.getSimpleName();
     public static final String SCHEME = "http";
     public static final String AUTHORITY = "api.themoviedb.org";
